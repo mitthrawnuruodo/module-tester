@@ -1,3 +1,5 @@
+import { round } from "./utils.js";
+
 export function farenheitToCelcius(f) {
     // °C = °F - 32 / 1.8000
     if (f < -459.67) console.error(`${f} is too cold`);
@@ -12,14 +14,12 @@ export function celciusToFarenheit(c) {
     return round((c * 1.8000 + 32.00));
 }
 
-/**
- * Source: https://writingjavascript.com/round-number-to-a-specific-precision-in-javascript
- */
+/*
 function round(n, precision = 1) {
     const exponent = Math.pow(10, precision);
     return Math.round(n * exponent) / exponent;
 }
-
+*/
 /*
 
 console.log(`-40°C = ${celciusToFarenheit(-40)}°F`); // -40

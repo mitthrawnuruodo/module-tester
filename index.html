@@ -8,7 +8,8 @@
     <script type="module" src="index.js" defer></script>
 </head>
 <body>
-    <h1>Just testing some stuff</h1>
+    <h1>Utilities page...</h1>
+
     <hr>
     <h2>Fibonacci numbers</h2>
     <label for="fib">
@@ -19,14 +20,36 @@
     <span id="fib-result"></span>
 
     <p><a href="https://en.wikipedia.org/wiki/Fibonacci_number">More on Fibonacci Numbers</a></p>
+
     <hr>
     <h2>Temperature converter</h2>
+    <p>Convert temperatures from °C to °F and vice versa:</p>
     <input name="temp" id="temp" type="number">
-    <input type="radio" name="temp-type" id="celcius">
-    <label for="celcuis">°C</label>
+    <input type="radio" name="temp-type" id="celcius" selected>
+    <label for="celcius">°C</label>
     <input type="radio" name="temp-type" id="farenheit">
     <label for="farenheit">°F</label>
     <button type="submit" id="submit-temp">Convert</button>
     <span id="temp-result"></span>
+
+    <hr>
+    <h2>Currency converter</h2>
+    <input name="amount" id="amount" type="number" placeholder="100">
+    <select id="convertFrom" name="convertFrom">
+        <option selected>NOK</option>
+        <option>EUR</option>
+        <option>GBP</option>
+        <option>USD</option>
+    </select>
+    <select id="convertTo" name="convertTo">
+        <option>NOK</option>
+        <option>EUR</option>
+        <option selected>GBP</option>
+        <option>USD</option>
+    </select>
+    <button type="submit" id="submit-currency">Convert</button>
+    <span id="currency-result"></span>
+
+    <hr>
 </body>
 </html>
