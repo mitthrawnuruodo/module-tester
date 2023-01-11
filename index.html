@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just testing</title>
+    <script type="module" src="index.js" defer></script>
+</head>
+<body>
+    <h1>Just testing some stuff</h1>
+    <hr>
+    <h2>Fibonacci numbers</h2>
+    <label for="fib">
+        Find the n'th fibonnacci number
+    </label>
+    <input name="fib" id="fib" type="number" min="0" max="100">
+    <button type="submit" id="submit-fib">Get F<sub>n</sub></button>
+    <span id="fib-result"></span>
+
+    <p><a href="https://en.wikipedia.org/wiki/Fibonacci_number">More on Fibonacci Numbers</a></p>
+    <hr>
+    <h2>Temperature converter</h2>
+    <input name="temp" id="temp" type="number">
+    <input type="radio" name="temp-type" id="celcius">
+    <label for="celcuis">°C</label>
+    <input type="radio" name="temp-type" id="farenheit">
+    <label for="farenheit">°F</label>
+    <button type="submit" id="submit-temp">Convert</button>
+    <span id="temp-result"></span>
+</body>
+</html>
