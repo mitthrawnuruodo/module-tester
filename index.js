@@ -16,6 +16,7 @@ document.getElementById("submit-temp").addEventListener('click', () => {
     for (let btn of radioButtons){
         if (btn.checked) {
             fromType = btn.id;
+            break;
         }
     }
     //console.log(`Convert ${temp} from ${fromType}`);
