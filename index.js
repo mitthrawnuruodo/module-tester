@@ -1,4 +1,6 @@
-/** Fibonacci-numbers */
+/** 
+ * Fibonacci-numbers 
+ */
 import fibonacci from './utils/fibonacci.js';
 document.getElementById("submit-fib").addEventListener('click', () => { 
     let n = document.getElementById("fib").value;
@@ -6,7 +8,9 @@ document.getElementById("submit-fib").addEventListener('click', () => {
     document.getElementById("fib-result").innerHTML = `F<sub>${n}</sub> = ${fn}`;
 });
 
-/** Temperature converter */
+/** 
+ * Temperature converter 
+ */
 import { celciusToFarenheit, farenheitToCelcius } from './utils/temperature.js';
 document.getElementById("submit-temp").addEventListener('click', () => { 
     const out = document.getElementById("temp-result");
@@ -29,7 +33,9 @@ document.getElementById("submit-temp").addEventListener('click', () => {
     }
 });
 
-/** Currency converter */
+/** 
+ * Currency converter 
+ */
 import { currencyConverter, getAllCurrencies } from './utils/currency.js';
 document.getElementById("submit-currency").addEventListener('click', () => { 
     const out = document.getElementById("currency-result");
@@ -45,7 +51,9 @@ const fromCurrencyList = document.getElementById("convertFromSymbols");
 const toCurrencyList = document.getElementById("convertToSymbols");
 getAllCurrencies(fromCurrencyList, toCurrencyList); 
 
-/** Amiibos */
+/** 
+ * Amiibos 
+ */
 import { getAllAmiibos, filterAmiibos } from './utils/amiibos.js';
 const outPutElement = document.getElementById("amiibos");
 getAllAmiibos(outPutElement);
@@ -77,7 +85,6 @@ let amiiboSeriesCheckbox = document.getElementById("amiibo-series")
 amiiboSeriesCheckbox.addEventListener('input', updateSearch);
 
 function updateSearch() {
-
     let searchString = searchBox.value;
 
     let nameOpt = nameCheckBox.checked;
@@ -87,5 +94,23 @@ function updateSearch() {
 
     //console.log(`Will search for ${searchString}`, options);
     filterAmiibos(searchString, outPutElement, options);
+}
 
+document.getElementById("openAll").addEventListener("click", () => {
+    //console.log ("Opening all closed details boxes");
+    toggleDetails("open");
+});
+document.getElementById("closeAll").addEventListener("click", () => {
+    //console.log ("Closing all open details boxes");
+    toggleDetails("close");
+});
+
+function toggleDetails(mode) {
+    let detailsElements = document.querySelectorAll("details");
+    // console.log(detailsElements.length);
+    for (let element of detailsElements) {
+        //console.log(element); 
+        if (mode==="open") element.setAttribute('open', true);
+        if (mode==="close") element.removeAttribute('open');
+    }
 }
