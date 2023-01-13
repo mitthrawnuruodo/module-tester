@@ -21,8 +21,6 @@ node_modules/
 
 `npm install --save-dev html-webpack-plugin`
 
-`npm install --save-dev style-loader css-loader`
-
 Add build to package.json:
 
 ```js
@@ -65,3 +63,34 @@ Use githup-repo: ...
 Branch to deploy: `webpack`
 Publish directory: `dist/`
 
+Add CSS from css-file:
+
+Make ./style.css: 
+
+```css
+div#amiibos {
+    display: grid; 
+    grid-template-columns: auto auto auto auto; 
+    margin-top: 20px;
+}
+```
+(and remove the style-tag from the index.html-file)
+
+`npm install --save-dev style-loader css-loader`
+
+Add the css-file to the (top of) the _javascript_ file index.js: 
+
+```js
+import "./style.css"
+```
+
+The CSS will be injected from JS.
+
+Like the script file, the linked CSS in the template file needs to be removed (ie. commented out) when building:
+
+```html
+    <!--<script type="module" src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">-->
+```
+
+@todo: REALLY need to find a better soluting, not involving lodash...
