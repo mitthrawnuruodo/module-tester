@@ -4,21 +4,20 @@ Test repo for the Module Demo in class
 
 ---
 
-Add Webpack:
+Process for adding Webpack:
 
 Make sure you have node_modules ignored, BUT remove dist, basically just reduce the .gitignore to:
 
 ```
 # Dependency directories
 node_modules/
-
 ```
 
-npm init -y
+`npm init -y`
 
-npm install webpack webpack-cli --save-dev
+`npm install webpack webpack-cli --save-dev`
 
-npm install --save-dev html-webpack-plugin
+`npm install --save-dev html-webpack-plugin`
 
 Add build to package.json:
 
@@ -33,12 +32,32 @@ Make webpack.config.js
 
 ```js
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: "production",
   entry: './index.js',
+  plugins: [
+    new HtmlWebpackPlugin({
+        template: './index.html',
+        filename: './index.html'
+    }),
+  ],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
 };
 ```
+
+Remove script tag from the template html-file: ./index.html 
+@todo: NEEED to find a solution to this...
+
+`npm run build`
+
+Set up Netlify:
+
+Use githup-repo: ...
+Branch to deploy: `webpack`
+Publish directory: `dist/`
+

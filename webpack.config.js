@@ -11,7 +11,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: 'index.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
 };
