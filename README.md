@@ -21,6 +21,8 @@ node_modules/
 
 `npm install --save-dev html-webpack-plugin`
 
+`npm install --save-dev style-loader css-loader`
+
 Add build to package.json:
 
 ```js
