@@ -1,6 +1,6 @@
 Module Tester
 
-Test repo for the Module Demo in class, adding vite to main, vanilla project and deploying to GirHub Pages (or, that's the plan)
+Test repo for the Module Demo in class, adding vite to main, vanilla project and deploying to Netlify (and later GitHub Pages...?)
 
 ---
 
@@ -29,7 +29,26 @@ Add scripts to package.json:
 
 Build: `npm run build`
 
+Add style css-file:
+
+```css
+div#amiibos {
+    display: grid; 
+    grid-template-columns: auto auto auto auto; 
+    margin-top: 20px;
+    background-color: #eefaee;
+}
+```
+
+And remove from html: 
+
+```html
+    <div id="amiibos"></div>
+```
 
 ---
+
+// Base GH pages on:
+https://dev.to/shashannkbawa/deploying-vite-app-to-github-pages-3ane#comment-22iei
 
 `npm install gh-pages --save-dev`
