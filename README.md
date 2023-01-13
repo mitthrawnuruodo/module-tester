@@ -1,6 +1,6 @@
 # Module Tester
 
-Test repo for the Module Demo in class
+Test repo for the Module Demo in class, adding Webpack to main, vanilla project, and deploying to Netlify.
 
 Deployed to [https://harmonious-salmiakki-1b6627.netlify.app/](https://harmonious-salmiakki-1b6627.netlify.app/)
 
