@@ -2,14 +2,14 @@ import { round } from "./utils.js";
 
 export function farenheitToCelcius(f) {
     // °C = °F - 32 / 1.8000
-    if (f < -459.67) console.error(`${f} is too cold`);
+    if (f < -459.67) console.error(`${f}°F is too cold`);
     //return (f-32.00)/1.8000;
     return round((f-32.00)/1.8000);
 }
 
 export function celciusToFarenheit(c) {
     // °F = °C * 1.8000 + 32.00
-    if (c < -273.15) console.error(`${c} is too cold`);
+    if (c < -273.15) console.error(`${c}°C is too cold`);
     //return c * 1.8000 + 32.00;
     return round((c * 1.8000 + 32.00));
 }
