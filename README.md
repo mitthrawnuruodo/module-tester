@@ -72,9 +72,14 @@ div#amiibos {
     display: grid; 
     grid-template-columns: auto auto auto auto; 
     margin-top: 20px;
+    background-color: #faeeee;
 }
 ```
-(and remove the style-tag from the index.html-file)
+and remove the style-tag from the index.html-file: 
+
+```html
+    <div id="amiibos"></div>
+```
 
 `npm install --save-dev style-loader css-loader`
 
