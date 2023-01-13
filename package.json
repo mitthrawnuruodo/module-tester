@@ -1,0 +1,26 @@
+{
+  "name": "module-tester",
+  "version": "1.0.0",
+  "description": "Module Tester",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitthrawnuruodo/module-tester.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitthrawnuruodo/module-tester/issues"
+  },
+  "homepage": "https://github.com/mitthrawnuruodo/module-tester#readme",
+  "dependencies": {
+    "vite": "^4.0.4"
+  }
+}
