@@ -84,6 +84,24 @@ and remove the style-tag from the index.html-file:
 
 `npm install --save-dev style-loader css-loader`
 
+Add module to webpack.config: 
+
+```js
+  output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+};
+```
+
 Add the css-file to the (top of) the _javascript_ file index.js: 
 
 ```js
