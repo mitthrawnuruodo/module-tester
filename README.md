@@ -2,6 +2,8 @@ Module Tester
 
 Test repo for the Module Demo in class, adding vite to main, vanilla project and deploying to Netlify (and later GitHub Pages...?)
 
+Netlify: [https://keen-mooncake-369800.netlify.app/](https://keen-mooncake-369800.netlify.app/)
+
 ---
 
 Reduce .gitignore to (or add gitignore if not precent)
@@ -45,6 +47,8 @@ And remove from html:
 ```html
     <div id="amiibos"></div>
 ```
+
+Re-build...
 
 ---
 
