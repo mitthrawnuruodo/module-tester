@@ -53,6 +53,7 @@ module.exports = {
 ```
 
 Remove script tag from the template html-file: ./index.html 
+
 @todo: NEEED to find a solution to this...
 
 `npm run build`
